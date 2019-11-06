@@ -1,22 +1,33 @@
-import React, { useState, useContext } from 'react';
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import React, { useContext, useState } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  Button
+} from 'react-native';
 import { Context as BlogContext } from '../context/BlogContext';
 
-const CreatePost = ({ navigation }) => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const { addBlogPost } = useContext(BlogContext);
+const EditScreen = ({ navigation }) => {
+  const blogPosts = useContext(BlogContext).state;
+  const id = navigation.getParam('id');
+  const blogPost = blogPosts.find(blogPost => blogPost.id === id);
+  const [title, setTitle] = useState(blogPost.title);
+  const [content, setContent] = useState(blogPost.content);
+  const { editBlogPost } = useContext(BlogContext);
+
   return (
     <View>
-      <Text style={styles.titleStyle}> Add New post</Text>
-      <Text style={styles.label}> Post Title:</Text>
+      <Text style={styles.titleStyle}> Edit post</Text>
+      <Text style={styles.label}> Edit Post Title:</Text>
       <TextInput
         // autoFocus
         value={title}
         onChangeText={text => setTitle(text)}
         style={styles.inputStyle}
       />
-      <Text style={styles.label}> Post Content:</Text>
+      <Text style={styles.label}> Edit Post Content:</Text>
       <TextInput
         autoFocus
         value={content}
@@ -27,21 +38,19 @@ const CreatePost = ({ navigation }) => {
         textAlignVertical='top'
       />
       <Button
-        title='Add Blog Post'
+        title='Submit Changes'
         onPress={() => {
-          addBlogPost(title, content, () => {
-            setContent('');
-            setTitle('');
-            navigation.navigate('Index');
+          editBlogPost(id, title, content, () => {
+            navigation.pop();
           });
         }}
       />
     </View>
   );
 };
-CreatePost.navigationOptions = ({ navigattion }) => {
+EditScreen.navigationOptions = ({ navigattion }) => {
   return {
-    title: 'Add New Post'
+    title: 'Edit Post'
   };
 };
 
@@ -67,4 +76,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CreatePost;
+export default EditScreen;
