@@ -5,10 +5,15 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "db": "json-server -w db.json",
+    "tunnel": "ngrok http 3000",
+    "server": "start npm run tunnel &&  npm run db"
   },
   "dependencies": {
     "expo": "^35.0.0",
+    "json-server": "^0.15.1",
+    "ngrok": "^3.2.5",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
