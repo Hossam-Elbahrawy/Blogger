@@ -11,14 +11,13 @@ const CreatePost = ({ navigation }) => {
       <Text style={styles.titleStyle}> Add New post</Text>
       <Text style={styles.label}> Post Title:</Text>
       <TextInput
-        // autoFocus
+        autoFocus
         value={title}
         onChangeText={text => setTitle(text)}
         style={styles.inputStyle}
       />
       <Text style={styles.label}> Post Content:</Text>
       <TextInput
-        autoFocus
         value={content}
         onChangeText={text => setContent(text)}
         style={styles.inputStyle}
