@@ -35,10 +35,12 @@ Getting up and running is as easy.
 
 ## Screenshots
 
-<img src='./screenshots/screen_1.png' width='300' height='650' alt='screen_1'>
-<img src='./screenshots/screen_2.png' width='300' height='650' alt='screen_2'>
-<img src='./screenshots/screen_3.png' width='300' height='650' alt='screen_3'>
-<img src='./screenshots/screen_4.png' width='300' height='650' alt='screen_4'>
+<div display='flex'>
+<img src='./screenshots/screen_1.png' width='40%' height='650' alt='screen_1'>
+<img src='./screenshots/screen_2.png' width='40%' height='650' alt='screen_2'>
+<img src='./screenshots/screen_3.png' width='40%' height='650' alt='screen_3'>
+<img src='./screenshots/screen_4.png' width='40%' height='650' alt='screen_4'>
+</div>
 
 ## Support
 
