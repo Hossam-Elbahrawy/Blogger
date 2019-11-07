@@ -23,11 +23,22 @@ Getting up and running is as easy.
    npm start
    ```
 
-4. Install [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US) Android Application
+4. Run the json server and ngrok with
+   ```
+   npm run server
+   ```
+5. Update the URL from ngrok to the "api/jsonServer.js" file
 
-5. Scan the QR code and you are good to go.
+6. Install [Expo](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US) Android Application
+
+7. Scan the QR code and you are good to go.
 
 ## Screenshots
+
+<img src='./screenshots/screen_1.png' width='300' height='650' alt='screen_1'>
+<img src='./screenshots/screen_2.png' width='300' height='650' alt='screen_2'>
+<img src='./screenshots/screen_3.png' width='300' height='650' alt='screen_3'>
+<img src='./screenshots/screen_4.png' width='300' height='650' alt='screen_4'>
 
 ## Support
 

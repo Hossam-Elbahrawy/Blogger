@@ -1,24 +1,19 @@
 {
   "blogposts": [
     {
-      "id": 1,
-      "title": "API Post",
-      "content": "API Post Content"
+      "title": "Post #1",
+      "content": "The Content of Post #1",
+      "id": 1
     },
     {
-      "title": "Ffff",
-      "content": "Gff",
+      "title": "Post #2",
+      "content": "The Content of Post #2",
       "id": 2
     },
     {
-      "title": "Fff",
-      "content": "Gff",
-      "id": 4
-    },
-    {
-      "title": "Brooo",
-      "content": "",
-      "id": 5
+      "title": "Post #3",
+      "content": "This is a very interesting post or maybe not. I not sure what the hell am I typing but most importantly.. why are your reading this?.\nDo you really think there is something useful here? Shame on you, man!\nI should probably just sleep, right?",
+      "id": 3
     }
   ]
 }
