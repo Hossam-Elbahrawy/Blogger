@@ -11,7 +11,7 @@
     "server": "start npm run tunnel &&  npm run db"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "expo": "^35.0.0",
     "json-server": "^0.15.1",
     "ngrok": "^3.2.5",
